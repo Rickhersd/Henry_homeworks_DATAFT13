@@ -1,0 +1,12 @@
+# innecessary files. The whole repository only include files.py with de answers
+
+*.ipynb
+*.pdf
+*.json
+*.JPG
+*.png
+*.csv
+*.txt
+
+/M1/**/*.md
+/M1/_src/
