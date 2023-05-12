@@ -47,7 +47,7 @@ class juego_pilas():
         sum_result += self.__shuffled_numbers.pop()
 
       if (sum_result <= 50):
-        self.__calification -= 11
+        self.__calification -= 1
 
     return print('Has ganado con: ', self.__calification, ' puntos')
 
@@ -100,8 +100,7 @@ class Jarra():
   
   def get_litros_llenados(self): # Esto devleve cuanta agua hay dentro
     return len(self.content)
-   
-    
+       
 class Juego_jarras():
 
   def __init__(self):
@@ -131,7 +130,7 @@ class Juego_jarras():
       elif opcion == 4:
         self.jarra_cinco.verter(5)
       elif opcion == 5:
-        self.intercambiar_liquidos(self.jarra_tres, self.jarra_cinco) # Este metodo es interno de la clase juego_jarras
+        self.intercambiar_liquidos(self.jarra_tres, self.jarra_cinco)
       elif opcion == 6:
         self.intercambiar_liquidos(self.jarra_cinco, self.jarra_tres)
       else:
@@ -144,9 +143,9 @@ class Juego_jarras():
         print('Lo has conseguido')
         return
 
-  # Esta funcion se encarga de intercambiar liquidos, y para ellos recibe dos Objetos Jarras. La sintaxis del : Jarra es un tipado datos, y se hace para indicar que tipo de datos deben entrar en la funcion. En este caso dos jarras
+  # Esta funcion se encarga de intercambiar liquidos, y para ellos recibe dos Objetos Jarras.
   def intercambiar_liquidos(self, jarra_origen: Jarra, jarra_destino: Jarra): # 
-    litros_jarra_origen = jarra_origen.get_litros_llenados() # Obtenemos cuantos ligros hay en una jarra
+    litros_jarra_origen = jarra_origen.get_litros_llenados() # Obtenemos cuantos litros hay en una jarra
     litros_avalibles_jarra_destino = jarra_destino.get_espacio_vacio() # Obtemos cuantos litros permite la segunda
 
     cantidad = 0
